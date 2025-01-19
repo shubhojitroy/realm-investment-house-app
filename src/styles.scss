@@ -1,1 +1,39 @@
 /* You can add global styles to this file, and also import other style files */
+@import "./app/sass/sass-components/variables";
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  height: 100%;
+}
+
+body {
+  min-height: 100vh;
+  // display: flex;
+  // flex-direction: column;
+  display: grid;
+  grid-template-rows: auto 1fr auto;
+  font-family: "Roboto", serif;
+  font-weight: 400;
+  font-style: normal;
+
+  background: rgba($bg-light, 1);
+  background: linear-gradient(
+      135deg,
+      rgba($bg-light, 0.1275) 0%,
+      rgba($bg-lighter, 0.3725) 34%,
+      rgba($bg-lightest, 0.2753) 100%
+    ),
+    url("../public/assets/Background.jpg") no-repeat center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  margin: 0;
+  padding: 0;
+  position: relative;
+}

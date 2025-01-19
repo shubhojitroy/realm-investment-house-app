@@ -1,0 +1,81 @@
+@import "./variables";
+@import "./mixins";
+@import "./utilities";
+
+.content-body {
+  padding: 1rem;
+
+  .section-subtitle h4 {
+    font-size: 0.87rem;
+    color: $modal-subheading;
+    // text-align: left;
+  }
+
+  p {
+    text-align: left;
+    padding-left: 0.275rem;
+    font-size: 0.78rem;
+    hyphens: auto;
+  }
+
+  ul {
+    li {
+      text-align: left;
+      padding-left: 0.275rem;
+      font-size: 0.78rem;
+      hyphens: auto;
+      margin-left: 1.1rem;
+    }
+  }
+
+  h2 {
+    font-size: 1.25rem;
+    margin: 0.5rem;
+    padding: 0;
+
+    @include headingMain;
+    transition: all 0.2s;
+
+    &:hover {
+      transform: skewY(-10deg) scale(1.1);
+      text-shadow: 0.5rem 1rem 2rem rgba($color-black, 0.2);
+    }
+  }
+
+  a:link,
+  a:hover,
+  a:visited {
+    color: $gradient-light;
+    font-weight: 500;
+    text-decoration: none;
+    border-bottom: 1px solid $gradient-light;
+    padding-bottom: 1px;
+  }
+}
+
+@media (min-width: 768px) {
+  h2 {
+    font-size: 1.75rem;
+    margin: 0.75rem;
+    padding: 0;
+  }
+
+  menu {
+    width: auto;
+  }
+
+  .section-subtitle h4 {
+    font-size: 1.275rem !important;
+  }
+
+  p,
+  ul li {
+    font-size: 1.5rem !important;
+    padding: 0.75rem;
+    hyphens: auto;
+  }
+
+  ul li {
+    margin-left: 1.875rem !important;
+  }
+}

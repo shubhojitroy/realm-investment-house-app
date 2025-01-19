@@ -1,0 +1,48 @@
+@import "./variables";
+
+.btn-blue {
+  background-color: $gradient-dark;
+  color: $color-white;
+  margin: 1rem;
+  padding: 0.5rem 1rem;
+  border: 1px solid $gradient-dark;
+  border-radius: 100px;
+  cursor: pointer;
+}
+
+.btn-blue:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+.btn-blue:active {
+  transform: translateY(-1px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+.btn::after {
+  content: "";
+  display: inline-block;
+  height: 100%;
+  // width: 100%;
+  border-radius: 10rem;
+  // position: absolute;
+  // top: 0;
+  // left: 0;
+  z-index: -1;
+  transition: all 0.4s;
+}
+
+.btn-blue::after {
+  background-color: $gradient-dark;
+}
+
+.btn:hover::after {
+  transform: scaleX(1.4) scaleY(1.6);
+  opacity: 0;
+}
+
+.btn-animated {
+  animation: moveInBottom 0.5s ease-out 0.75s;
+  animation-fill-mode: backwards;
+}

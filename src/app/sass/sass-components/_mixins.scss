@@ -1,0 +1,29 @@
+@import "variables";
+
+@mixin flex-display {
+  display: flex;
+  flex-direction: column;
+}
+
+@mixin absCenter {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+@mixin clearfix {
+  &::after {
+    content: "";
+    clear: both;
+    display: table;
+  }
+}
+
+@mixin headingMain {
+  display: inline-block;
+  background-image: linear-gradient(to right, $gradient-light, $gradient-dark);
+  background-clip: text;
+  color: transparent;
+  letter-spacing: 2px;
+}
